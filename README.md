@@ -1,0 +1,2 @@
+# Skin_disease_detection_n_Hairloss_Prediciton
+ Data Science Project
