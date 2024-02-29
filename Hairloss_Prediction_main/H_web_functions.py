@@ -3,7 +3,8 @@
 # Import necessary modules
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
+from sklearn import preprocessing
+#from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeClassifier
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
@@ -33,7 +34,7 @@ def train_model(X, y):
     """This function trains the model and return the model and model score"""
     #split the data into training and test dataset
     # Normalize the features using Min-Max scaling
-    scaler = MinMaxScaler()
+    scaler = preprocessing.MinMaxScaler()
     X_normalized = scaler.fit_transform(X)
     x_train,x_test,y_train,y_test = train_test_split(X_normalized, y, test_size=0.2, random_state=30)
 
