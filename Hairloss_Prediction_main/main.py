@@ -12,8 +12,8 @@ import os
 sys.path.append(str(Path(__file__).parent))
 os.environ["PYTHONPATH"] = str(Path(__file__).parent.parent)
 
-from Hairloss_Prediction_main.H_web_functions import load_data
-from Hairloss_Prediction_main.Tabs import home, data, predict
+from H_web_functions import load_data
+from Tabs import home, data, predict
 
 def Hmain():
     # Configure the app
