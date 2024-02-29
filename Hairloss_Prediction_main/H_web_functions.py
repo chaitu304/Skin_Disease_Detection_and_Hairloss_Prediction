@@ -4,8 +4,9 @@
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
+import sklearn as sk
 #from sklearn.preprocessing import MinMaxScaler
-from sklearn.tree import DecisionTreeClassifier
+#from sklearn.tree import DecisionTreeClassifier
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -34,7 +35,7 @@ def train_model(X, y):
     """This function trains the model and return the model and model score"""
     #split the data into training and test dataset
     # Normalize the features using Min-Max scaling
-    scaler = preprocessing.MinMaxScaler()
+    scaler = sk.preprocessing.MinMaxScaler()
     X_normalized = scaler.fit_transform(X)
     x_train,x_test,y_train,y_test = train_test_split(X_normalized, y, test_size=0.2, random_state=30)
 
